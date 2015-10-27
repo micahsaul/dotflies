@@ -7,11 +7,13 @@ set modelines=0
 
 syntax on
 colorscheme molokai
+set laststatus=2
 
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set shiftround
 
 set encoding=utf-8
 set scrolloff=5
@@ -25,7 +27,9 @@ set ttyfast
 set number
 
 let mapleader = ","
+let localleader = "\\"
 
+" Better search and replace
 set ignorecase
 set smartcase
 set gdefault
@@ -36,8 +40,20 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
-set wrap
-set textwidth=79
-set colorcolumn=79
+" Esc is hard to reach, and CAPs is my hyper
+inoremap jk <ESC>
+inoremap <ESC> <nop>
 
-inoremap jj <ESC>
+" Edit vimrc faster
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" 0 and $ are hard to reach. G and gg don't need duplication
+nnoremap H 0
+nnoremap L $
+
+" Better split navigation
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
