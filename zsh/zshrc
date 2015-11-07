@@ -1,0 +1,25 @@
+# Setup antigen
+source ~/.zsh/antigen/antigen.zsh
+antigen use oh-my-zsh
+
+# Install oh-my-zsh bundles
+antigen bundle git
+antigen bundle osx
+antigen bundle brew
+antigen bundle virtualenvwrapper
+
+# Install external bundles
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Theme
+antigen theme ~/.zsh/themes agnoster
+
+# Done
+antigen apply
+
+# Source aliases and etc.
+source ~/.zprofile
+
+# Vi Mode
+bindkey -v
+bindkey -M viins 'jk' vi-cmd-mode

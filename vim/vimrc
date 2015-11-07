@@ -1,13 +1,31 @@
 set nocompatible
-runtime bundle/vim-pathogen/autoload/pathogen.vim
 filetype off
-execute pathogen#infect()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Let Vundle manage itself
+Plugin 'VundleVim/Vundle.vim'
+
+" Put bundles here
+
+Plugin 'tomasr/molokai'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'tpope/vim-surround'
+ 
+" Bundles go above this!
+call vundle#end()
 filetype plugin indent on
 set modelines=0
 
 syntax on
-colorscheme molokai
 set laststatus=2
+colorscheme molokai
+
+" Powerline provides mode indicator
+set noshowmode
 
 set tabstop=4
 set shiftwidth=4
@@ -18,7 +36,6 @@ set shiftround
 set encoding=utf-8
 set scrolloff=5
 set autoindent
-set showmode
 set showcmd
 set hidden
 set visualbell

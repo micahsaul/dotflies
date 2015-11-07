@@ -1,0 +1,15 @@
+# Use backtick as prefix
+unbind C-b
+set-option -g prefix `
+bind ` send-prefix
+
+# Don't break color schemes
+set -g default-terminal "xterm-256color"
+
+# TPM settings go on the bottom
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-pain-control'
+
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
