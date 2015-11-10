@@ -191,6 +191,8 @@ zle -N zle-line-init
 
 TIME="%F{white}%f%F{black}%K{white}[%D{%L:%M:%S %p}]%k%f"
 
+NEWLINE=$'\n'
+
 # Build Prompts
-PROMPT='%{%f%b%k%}$(build_prompt) '
+PROMPT='%{%f%b%k%}$(build_prompt)'
 RPROMPT='$VIMODE $TIME'
