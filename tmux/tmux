@@ -3,6 +3,10 @@ unbind C-b
 set-option -g prefix `
 bind ` send-prefix
 
+# Count from 1
+set -g base-index 1
+set -g pane-base-index 1
+
 # Don't break color schemes
 set -g default-terminal "xterm-256color"
 
