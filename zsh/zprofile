@@ -10,10 +10,6 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
 
-alias selenium-server="java -jar ~/Tools/selenium-server-standalone-2.44.0.jar"
-alias startlocaldb=". ~/Tools/scripts/start_local_db"
-alias startlocalhtsql=". ~/Tools/scripts/start_local_htsql"
-alias local-session="tmux new-session 'tmux source-file ~/local-session'"
 alias ls="ls -laG "
 
 export VISUAL=vim
@@ -22,7 +18,6 @@ export PATH=/usr/local/bin:$PATH
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 export GITHUB_USER='micahsaul'
-export GITHUB_PASSWORD='m6T9oNOnm361'
 
 alias rexster-start="~/Projects/tools/rexster/rexster-server/bin/rexster.sh --start -c ~/Projects/tools/rexster/rexster-server/config/rexster.xml"
 
