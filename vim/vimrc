@@ -16,6 +16,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
 Plugin 'tmhedberg/matchit'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
 
 " Bundles go above this!
 call vundle#end()
@@ -78,8 +80,12 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
  
 " Airline Config
-
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_theme='molokai'
 let g:airline#extensions#tabline#enabled = 1
+
+" YouCompleteMe Config
+let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
