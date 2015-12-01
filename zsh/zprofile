@@ -17,12 +17,6 @@ export EDITOR="$VISUAL"
 export PATH=/usr/local/bin:$PATH
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-export GITHUB_USER='micahsaul'
-
-alias rexster-start="~/Projects/tools/rexster/rexster-server/bin/rexster.sh --start -c ~/Projects/tools/rexster/rexster-server/config/rexster.xml"
-
-alias rexster-stop="~/Projects/tools/rexster/rexster-server/bin/rexster.sh --stop"
-
 alias mou="open ~/Applications/Mou.app"
 
 eval "$(hub alias -s)"
@@ -30,3 +24,5 @@ VIRTUAL_ENV_DISABLE_PROMPT=yes
 source /usr/local/Cellar/todo-txt/2.10/etc/bash_completion.d/todo_completion complete -F _todo t
 alias t='/usr/local/Cellar/todo-txt/2.10/bin/todo.sh -d ~/todo/todo.cfg'
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+source ~/.secrets
