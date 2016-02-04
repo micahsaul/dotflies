@@ -18,6 +18,10 @@ Plugin 'tmhedberg/matchit'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
+Plugin 'scrooloose/syntastic'
+Plugin 'jpalardy/vim-slime'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'ervandew/supertab'
 
 " Bundles go above this!
 call vundle#end()
@@ -66,7 +70,7 @@ inoremap jk <ESC>
 inoremap <ESC> <nop>
 
 " Edit vimrc faster
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " 0 and $ are hard to reach. G and gg don't need duplication
@@ -75,8 +79,6 @@ nnoremap L $
 
 " Better split navigation
 nnoremap <C-H> <C-W><C-H>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
  
 " Airline Config
@@ -89,3 +91,24 @@ let g:airline#extensions#tabline#enabled = 1
 let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
+
+" YCM + Ultisnips + Supertab
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" Syntastic config
+let g:syntastic_error_symbol = 'X'
+let g:syntastic_warning_symbol = '!'
+let g:syntastic_style_error_symbol = 'X'
+let g:syntastic_style_warning_label = '!'
+let g:syntastic_check_on_open = 1
+
+" Vim-Slime config
+let g:slime_target = 'tmux'
+let g:slime_python_ipython = 1
