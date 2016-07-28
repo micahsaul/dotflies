@@ -10,6 +10,10 @@ set -g pane-base-index 1
 # Don't break color schemes
 set -g default-terminal "xterm-256color"
 
+# Don't prompt on kill-pane
+
+bind-key x kill-pane
+
 # TPM settings go on the bottom
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-pain-control'

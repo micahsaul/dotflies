@@ -1,7 +1,7 @@
 setlocal colorcolumn=72,79
 nnoremap <buffer> <localleader>c I# <ESC>
-set textwidth=79
-set expandtab
-set autoindent
-set fileformat=unix
-set encoding=utf-8
+setlocal textwidth=79
+setlocal expandtab
+setlocal autoindent
+setlocal fileformat=unix
+setlocal encoding=utf-8

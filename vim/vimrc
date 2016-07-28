@@ -22,6 +22,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'jpalardy/vim-slime'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'ervandew/supertab'
+Plugin 'reedes/vim-pencil'
+Plugin 'itspriddle/vim-marked'
 
 " Bundles go above this!
 call vundle#end()
@@ -80,7 +82,7 @@ nnoremap L $
 " Better split navigation
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-L> <C-W><C-L>
- 
+
 " Airline Config
 let g:airline_left_sep=''
 let g:airline_right_sep=''
@@ -112,3 +114,13 @@ let g:syntastic_check_on_open = 1
 " Vim-Slime config
 let g:slime_target = 'tmux'
 let g:slime_python_ipython = 1
+
+" Vim-Pencil config
+let g:pencilWrapModeDefault = 'soft'
+"augroup pencil
+"    autocmd!
+"    autocmd FileType markdown,mkd,md call pencil#init()
+"                                 \ | setlocal textwidth=80
+"                                 \ | setlocal colorcolumn=80
+"                                 \ | MarkedOpen
+"augroup END
