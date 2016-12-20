@@ -8,6 +8,7 @@ antigen bundle osx
 antigen bundle brew
 antigen bundle brew-cask
 antigen bundle docker
+antigen bundle taskwarrior
 antigen bundle virtualenvwrapper
 antigen bundle vagrant
 
