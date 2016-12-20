@@ -1,6 +1,6 @@
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 
 " Let Vundle manage itself
@@ -16,14 +16,13 @@ Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
 Plugin 'tmhedberg/matchit'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'SirVer/ultisnips'
 Plugin 'scrooloose/syntastic'
 Plugin 'jpalardy/vim-slime'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'ervandew/supertab'
 Plugin 'reedes/vim-pencil'
 Plugin 'itspriddle/vim-marked'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Bundles go above this!
 call vundle#end()
